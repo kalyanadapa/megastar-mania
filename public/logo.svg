@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="star-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#F59E0B" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="96" stroke="url(#gold-gradient)" stroke-width="3" fill="none" opacity="0.6"/>
+
+  <!-- Inner filled circle -->
+  <circle cx="100" cy="100" r="88" fill="#0A0A0A"/>
+
+  <!-- Accent ring -->
+  <circle cx="100" cy="100" r="88" stroke="url(#gold-gradient)" stroke-width="1.5" fill="none" opacity="0.3"/>
+
+  <!-- Film reel notches (subtle cinema reference) -->
+  <circle cx="100" cy="16" r="3" fill="url(#gold-gradient)" opacity="0.5"/>
+  <circle cx="100" cy="184" r="3" fill="url(#gold-gradient)" opacity="0.5"/>
+  <circle cx="16" cy="100" r="3" fill="url(#gold-gradient)" opacity="0.5"/>
+  <circle cx="184" cy="100" r="3" fill="url(#gold-gradient)" opacity="0.5"/>
+
+  <!-- Star above the M -->
+  <polygon
+    points="100,32 104.5,44 117,44.5 107,52.5 110.5,65 100,57.5 89.5,65 93,52.5 83,44.5 95.5,44"
+    fill="url(#star-glow)"
+    filter="url(#shadow)"
+  />
+
+  <!-- Bold stylized M -->
+  <path
+    d="M 52 155 L 52 80 L 74 80 L 100 120 L 126 80 L 148 80 L 148 155 L 130 155 L 130 108 L 108 143 L 92 143 L 70 108 L 70 155 Z"
+    fill="url(#gold-gradient)"
+  />
+
+  <!-- Subtle underline accent -->
+  <rect x="55" y="161" width="90" height="2.5" rx="1.25" fill="url(#gold-gradient)" opacity="0.6"/>
+</svg>

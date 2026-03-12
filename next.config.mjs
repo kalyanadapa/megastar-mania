@@ -1,0 +1,19 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+        pathname: "/t/p/**",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/dh0xxfq9y/**",
+      },
+    ],
+  },
+};
+
+export default nextConfig;
