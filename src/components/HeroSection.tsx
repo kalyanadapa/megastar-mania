@@ -4,8 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const heroImages = [
+  "https://res.cloudinary.com/dh0xxfq9y/image/upload/v1773388827/hqdefault_qlbhj2.jpg",
   "https://res.cloudinary.com/dh0xxfq9y/image/upload/v1773320787/HD-wallpaper-chiranjeevi-acharya-actor-chiru-megastar-telugu-tollywood_tgo4lx.jpg",
   "https://res.cloudinary.com/dh0xxfq9y/image/upload/v1773320791/HD-wallpaper-chiranjeevi-actor-chiru-mega-star-chiranjeev-megastar-telugu_ura6xj.jpg",
+  "https://res.cloudinary.com/dh0xxfq9y/image/upload/v1773388875/images_1_vmxuxd.jpg"
 ];
 
 export default function HeroSection() {
@@ -14,7 +16,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,7 +26,7 @@ export default function HeroSection() {
       {heroImages.map((src, i) => (
         <div
           key={i}
-          className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-[1000ms] ease-in-out ${
             i === currentImage ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -56,7 +58,7 @@ export default function HeroSection() {
           <span className="block text-amber-400/90 text-sm sm:text-base tracking-[0.4em] uppercase font-medium mb-2">
             Konidela Sivasankara Varaprasad
           </span>
-          <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tight">
+          <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tight bg-gradient-to-r from-amber-300 via-amber-400 to-red-500 bg-clip-text text-transparent">
             CHIRAN
           </span>
           <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tight bg-gradient-to-r from-amber-300 via-amber-400 to-red-500 bg-clip-text text-transparent">
